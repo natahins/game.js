@@ -1,2 +1,2 @@
-export default {
-     currentView: 'homePageComponent' }
+export const currentView = 'titleComponent';
+

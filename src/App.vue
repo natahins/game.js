@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <component :is ="component"></component> 
+      <component :is="component"></component> 
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import titleComponent from './components/Title.vue'
 export default {
   name: 'app',
   components: {
-    titleComponent
+      titleComponent
   },
   computed: {
      ...mapGetters({
