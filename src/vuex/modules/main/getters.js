@@ -1,0 +1,1 @@
+export let getCurrentComponent =  (state) => state.currentView;
