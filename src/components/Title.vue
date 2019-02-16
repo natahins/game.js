@@ -3,7 +3,7 @@
         <div class="content">
         <h2 class="main-title">Смертельные шашки</h2>
         <br>
-        <button class="start-button">Начать игру</button>
+        <button class="start-button" @click="changeCompo">Начать игру</button>
         </div>    
     </div>
 </template>
@@ -12,6 +12,9 @@
 export default {
     name: 'titleComponent',
     methods: {
+      changeCompo() {
+         this.$store.dispatch('changeCurrentComponent', "Playground");
+      },
       ...mapActions(['changeCurrentComponent'])
     }
 }

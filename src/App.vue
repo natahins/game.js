@@ -6,11 +6,16 @@
 
 <script>
 import titleComponent from './components/Title.vue'
+import Playground from './components/Playground.vue'
+import Game from './components/Game.vue'
+
 
 export default {
   name: 'app',
   components: {
-      titleComponent
+      titleComponent, 
+      Playground,
+      Game
   },
   computed: {
      ...mapGetters({
