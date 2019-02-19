@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 import titleComponent from './components/Title.vue'
 import Playground from './components/Playground.vue'
 import Game from './components/Game.vue'

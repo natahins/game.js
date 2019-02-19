@@ -2,7 +2,11 @@
     <div class="playground">
         <div class="playground__line" v-for='(line, keyLine) in matrix'>
             <div v-for='(block, keyBlock) in line' :class='["playground__block", addClass(keyLine, keyBlock)]'>
-                <div class="checker" v-if='block !== null'></div>
+               <!--<div class="checker-white" v-if='block !== null'></div>-->
+             <div class="checker-white" v-if='matrix[line, keyLine].position!=="undefined" && matrix[line, keyLine].color==="white"'></div>
+             <div class="checker-black" v-if='matrix[line, keyLine].color==="black"'></div>
+
+              
             </div>
         </div>
     </div>
@@ -30,7 +34,8 @@ export default {
             } else {
                 return `${keyBlock % 2 === 0 ? 'playground__block_theme_black' : 'playground__block_theme_white'} keyLine-${keyLine} keyBlock-${keyBlock}`;
             }
-        }
+        },
+          ...mapActions(['changeCurrentComponent'])
     }
 }
 </script>
@@ -74,11 +79,19 @@ export default {
             line-height: 0;
         }
 
-        .checker {
+        .checker-white {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             box-sizing: border-box;
+            background-color: hotpink;
+        }
+        .checker-black {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background-color:indigo ;
         }
 
         .keyLine-7.keyBlock-0:after {

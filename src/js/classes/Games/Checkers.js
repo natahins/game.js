@@ -1,3 +1,5 @@
+import { Figure } from "./Figure.js";
+
 export class Checkers {
     constructor(matrix) {
         this.matrix = matrix;
@@ -33,11 +35,12 @@ export class Checkers {
 
     run() {
         this.playerOne.forEach(item => {
-            this.matrix[item[0]][item[1]] = 123;
+            this.matrix[item[0]][item[1]] = new Figure(this.playerOne[item[0]][item[1]], "white");
+            console.log(this.matrix[item[0]][item[1]]);
         });
 
         this.playerTwo.forEach(item => {
-            this.matrix[item[0]][item[1]] = 123;
+            this.matrix[item[0]][item[1]] = new Figure([[item[0]][item[1]]], "black");
         });
 
         return this.matrix;

@@ -1,2 +1,2 @@
-export const currentView = 'titleComponent';
+export const currentView = 'Playground';
 

@@ -10,8 +10,8 @@
 
 <script>
 export default {
-    name: 'titleComponent',
-    methods: {
+  name: 'titleComponent',
+   methods: {
       changeCompo() {
          this.$store.dispatch('changeCurrentComponent', "Playground");
       },
